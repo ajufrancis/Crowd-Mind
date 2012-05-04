@@ -1,0 +1,16 @@
+= Crowd Mind
+
+== Read when you want. Share with who you want
+
+=== What is Crowd Mind?
+
+Crowd Mind is a feeds reader, heavily inspired on the old design of Google Reader. It focus on sharing feeds between the users.
+
+But it has a big difference with Google Reader: you'll be capable of tagging your mates, and share the content with only the tags you want (and even with specific friends).
+
+=== Features
+
+* Various authentication types (twitter, facebook, linkedin, etc.), via omniauth
+* Follow by tagging a user
+* Share a entry publicly, for all your tags, for specific tags, or for specific users
+* Social networks buttons (Twitter, Facebook, Google+)
