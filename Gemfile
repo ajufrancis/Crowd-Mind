@@ -27,6 +27,8 @@ gem 'mongrel', '1.2.0.pre2', :group => :development
 gem 'omniauth'
 gem 'omniauth-openid'
 
+gem 'feedzirra'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
