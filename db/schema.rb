@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120505145815) do
+ActiveRecord::Schema.define(:version => 20120508172444) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -19,6 +19,42 @@ ActiveRecord::Schema.define(:version => 20120505145815) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "entries", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.string   "author"
+    t.string   "summary"
+    t.text     "content"
+    t.string   "uid"
+    t.datetime "published"
+    t.integer  "feed_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "entry_has_categories", :force => true do |t|
+    t.integer  "entry_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "feeds", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.string   "feed_url"
+    t.string   "etag"
+    t.datetime "last_modified"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|
