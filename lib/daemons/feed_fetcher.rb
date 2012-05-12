@@ -16,8 +16,7 @@ while($running) do
   @feeds ||= []
 
   # Gets the list of feeds urls
-  feed_list = Feed.all
-  feed_list.each do |f|
+  Feed.all.find_each do |f|
     i = @feeds.index { |x| x.feed_url==f.feed_url }
 
     if i
