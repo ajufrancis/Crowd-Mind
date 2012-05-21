@@ -1,0 +1,32 @@
+html {
+    font-family: Helvetica, Verdana, sans-serif;
+}
+
+header#main_header {
+    hgroup {
+        float: left;
+    }
+    nav {
+        float: right;
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+            display: block;
+            list-style: none;
+
+            li {
+                display: inline;
+
+                a {
+                    padding: 2px 10px;
+                    float: rigth;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    br {
+        clear: both;
+    }
+}
