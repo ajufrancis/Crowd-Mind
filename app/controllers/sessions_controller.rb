@@ -1,4 +1,6 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
+  before_filter :not_signed_required, only: [:create]
+  before_filter :signed_required, only: [:destroy]
   def create
     auth = request.env['omniauth.auth']
     @auth = (Authorization.find_from_hash(auth) or Authorization.create_from_hash(auth, current_user))
