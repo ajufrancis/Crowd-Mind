@@ -7,8 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header>
+    <hgroup>
+      <h1>Crowd Mind</h1>
+      <h2>Read when you want. Share with who you want.</h2>
+    </hgroup>
+    <nav>
+      <ul>
+        <li>Profile</li>
+        <li><%= link_to 'Logout', '/session', method: :delete %></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="content">
+    <%= yield %>
+  </div>
+  <footer>
+    <p>Copyright &copy; Yuri Albuquerque</p>
+    <p>The source code of this website is open source, and available at <a href="http://github.com/Denommus/Crowd-Mind">Github</a>.</p>
+  </footer>
 </body>
 </html>
