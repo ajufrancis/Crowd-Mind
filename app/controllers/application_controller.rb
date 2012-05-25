@@ -15,4 +15,12 @@ class ApplicationController < ActionController::Base
     @current_user = user
     session[:user_id] = user.id
   end
+
+  def not_signed_required
+    redirect to '/' if signed_in?
+  end
+
+  def signed_required
+    redirect_to '/auth/open_id' if !signed_in?
+  end
 end
